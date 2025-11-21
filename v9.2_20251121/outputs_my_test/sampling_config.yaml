@@ -1,0 +1,1256 @@
+adam_beta1: 0.9
+adam_beta2: 0.999
+adam_epsilon: 1.0e-08
+adam_weight_decay: 0.01
+algorithm_type: dpmsolver++
+beta_scheduler: scaled_linear
+channel_attn: true
+character_input: false
+ckpt_dir: /opt/Vivatype-AI/code_backup/v9.1_20251117/outputs_my_train/global_step_160000
+ckpt_interval: 40000
+content_char: 0
+content_character: null
+content_encoder_downsample_size: 3
+content_font: 94
+content_image_path: ../../data/font_imgs/test_v1_S128F120_FS64/094/0000.png
+content_image_root: ../../data/font_imgs/test_v1_S128F120_FS64
+content_image_size: !!python/tuple
+- 96
+- 96
+content_start_channel: 64
+contrast_coefficient: 0.1
+controlnet: false
+controlnet_conditioning_scale: 1.0
+correcting_x0_fn: null
+data_root: null
+demo: false
+device: cuda:0
+dim_svg: 12
+dml: true
+drop_prob: 0.1
+experience_name: fontdiffuer_training
+fusioner_n_out: 256
+gradient_accumulation_steps: 1
+guidance_scale: 7.5
+guidance_type: classifier-free
+hidden_size: 1024
+ids_input_mode: ch
+ids_max_len: 35
+ids_mode: radical
+ids_n_embed: 256
+img_root: null
+learning_rate: 0.0001
+local_rank: -1
+log_interval: 100
+logging_dir: logs
+loss_w_args: 1.0
+loss_w_aux: 0.01
+loss_w_cmd: 1.0
+loss_w_smt: 10.0
+lr_scheduler: linear
+lr_warmup_steps: 10000
+max_grad_norm: 1.0
+max_skeleton_len: 441
+max_svg_len: 3500
+max_train_steps: 440000
+method: multistep
+mixed_precision: 'no'
+mode: refinement
+model_type: noise
+my_feat_root: ../../data/my_font_feat/chn/UFSC16
+nce_layers: 0,1,2,3
+num_inference_steps: 20
+num_neg: 16
+num_refs: 1
+offset_coefficient: 0.5
+order: 2
+output_dir: null
+perceptual_coefficient: 0.01
+phase_1_ckpt_dir: null
+phase_2: false
+report_to: tensorboard
+resolution: 96
+resume_from_checkpoint: null
+save_image: true
+save_image_dir: outputs_my_test/
+sc_coefficient: 0.01
+scale_lr: false
+scr_ckpt_path: null
+scr_image_size: 96
+seed: 123
+skeleton_coefficient: 0.1
+skeleton_image_path: ../../data/font_imgs/test_v1_skeleton/094/0000.png
+skeleton_image_root: ../../data/font_imgs/test_v1_skeleton
+skeleton_img_root: null
+skeleton_raster_coefficient: 0.1
+skeleton_root: ../../data/my_font_bone/chn/UFSC64_v1
+skeleton_weight_post: 0.5
+skip: false
+skip_type: time_uniform
+style_char:
+- 1
+- 2
+- 3
+style_font: -1
+style_image_path:
+- - ../../data/font_imgs/test_v1_S128F120_FS64/000/0001.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/000/0002.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/000/0003.png
+- - ../../data/font_imgs/test_v1_S128F120_FS64/001/0001.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/001/0002.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/001/0003.png
+- - ../../data/font_imgs/test_v1_S128F120_FS64/002/0001.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/002/0002.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/002/0003.png
+- - ../../data/font_imgs/test_v1_S128F120_FS64/003/0001.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/003/0002.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/003/0003.png
+- - ../../data/font_imgs/test_v1_S128F120_FS64/004/0001.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/004/0002.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/004/0003.png
+- - ../../data/font_imgs/test_v1_S128F120_FS64/005/0001.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/005/0002.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/005/0003.png
+- - ../../data/font_imgs/test_v1_S128F120_FS64/006/0001.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/006/0002.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/006/0003.png
+- - ../../data/font_imgs/test_v1_S128F120_FS64/007/0001.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/007/0002.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/007/0003.png
+- - ../../data/font_imgs/test_v1_S128F120_FS64/008/0001.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/008/0002.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/008/0003.png
+- - ../../data/font_imgs/test_v1_S128F120_FS64/009/0001.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/009/0002.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/009/0003.png
+- - ../../data/font_imgs/test_v1_S128F120_FS64/010/0001.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/010/0002.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/010/0003.png
+- - ../../data/font_imgs/test_v1_S128F120_FS64/011/0001.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/011/0002.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/011/0003.png
+- - ../../data/font_imgs/test_v1_S128F120_FS64/012/0001.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/012/0002.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/012/0003.png
+- - ../../data/font_imgs/test_v1_S128F120_FS64/013/0001.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/013/0002.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/013/0003.png
+- - ../../data/font_imgs/test_v1_S128F120_FS64/014/0001.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/014/0002.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/014/0003.png
+- - ../../data/font_imgs/test_v1_S128F120_FS64/015/0001.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/015/0002.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/015/0003.png
+- - ../../data/font_imgs/test_v1_S128F120_FS64/016/0001.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/016/0002.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/016/0003.png
+- - ../../data/font_imgs/test_v1_S128F120_FS64/017/0001.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/017/0002.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/017/0003.png
+- - ../../data/font_imgs/test_v1_S128F120_FS64/018/0001.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/018/0002.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/018/0003.png
+- - ../../data/font_imgs/test_v1_S128F120_FS64/019/0001.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/019/0002.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/019/0003.png
+- - ../../data/font_imgs/test_v1_S128F120_FS64/020/0001.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/020/0002.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/020/0003.png
+- - ../../data/font_imgs/test_v1_S128F120_FS64/021/0001.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/021/0002.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/021/0003.png
+- - ../../data/font_imgs/test_v1_S128F120_FS64/022/0001.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/022/0002.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/022/0003.png
+- - ../../data/font_imgs/test_v1_S128F120_FS64/023/0001.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/023/0002.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/023/0003.png
+- - ../../data/font_imgs/test_v1_S128F120_FS64/024/0001.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/024/0002.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/024/0003.png
+- - ../../data/font_imgs/test_v1_S128F120_FS64/025/0001.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/025/0002.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/025/0003.png
+- - ../../data/font_imgs/test_v1_S128F120_FS64/026/0001.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/026/0002.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/026/0003.png
+- - ../../data/font_imgs/test_v1_S128F120_FS64/027/0001.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/027/0002.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/027/0003.png
+- - ../../data/font_imgs/test_v1_S128F120_FS64/028/0001.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/028/0002.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/028/0003.png
+- - ../../data/font_imgs/test_v1_S128F120_FS64/029/0001.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/029/0002.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/029/0003.png
+- - ../../data/font_imgs/test_v1_S128F120_FS64/030/0001.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/030/0002.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/030/0003.png
+- - ../../data/font_imgs/test_v1_S128F120_FS64/031/0001.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/031/0002.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/031/0003.png
+- - ../../data/font_imgs/test_v1_S128F120_FS64/032/0001.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/032/0002.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/032/0003.png
+- - ../../data/font_imgs/test_v1_S128F120_FS64/033/0001.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/033/0002.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/033/0003.png
+- - ../../data/font_imgs/test_v1_S128F120_FS64/034/0001.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/034/0002.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/034/0003.png
+- - ../../data/font_imgs/test_v1_S128F120_FS64/035/0001.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/035/0002.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/035/0003.png
+- - ../../data/font_imgs/test_v1_S128F120_FS64/036/0001.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/036/0002.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/036/0003.png
+- - ../../data/font_imgs/test_v1_S128F120_FS64/037/0001.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/037/0002.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/037/0003.png
+- - ../../data/font_imgs/test_v1_S128F120_FS64/038/0001.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/038/0002.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/038/0003.png
+- - ../../data/font_imgs/test_v1_S128F120_FS64/039/0001.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/039/0002.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/039/0003.png
+- - ../../data/font_imgs/test_v1_S128F120_FS64/040/0001.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/040/0002.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/040/0003.png
+- - ../../data/font_imgs/test_v1_S128F120_FS64/041/0001.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/041/0002.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/041/0003.png
+- - ../../data/font_imgs/test_v1_S128F120_FS64/042/0001.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/042/0002.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/042/0003.png
+- - ../../data/font_imgs/test_v1_S128F120_FS64/043/0001.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/043/0002.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/043/0003.png
+- - ../../data/font_imgs/test_v1_S128F120_FS64/044/0001.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/044/0002.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/044/0003.png
+- - ../../data/font_imgs/test_v1_S128F120_FS64/045/0001.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/045/0002.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/045/0003.png
+- - ../../data/font_imgs/test_v1_S128F120_FS64/046/0001.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/046/0002.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/046/0003.png
+- - ../../data/font_imgs/test_v1_S128F120_FS64/047/0001.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/047/0002.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/047/0003.png
+- - ../../data/font_imgs/test_v1_S128F120_FS64/048/0001.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/048/0002.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/048/0003.png
+- - ../../data/font_imgs/test_v1_S128F120_FS64/049/0001.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/049/0002.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/049/0003.png
+- - ../../data/font_imgs/test_v1_S128F120_FS64/050/0001.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/050/0002.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/050/0003.png
+- - ../../data/font_imgs/test_v1_S128F120_FS64/051/0001.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/051/0002.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/051/0003.png
+- - ../../data/font_imgs/test_v1_S128F120_FS64/052/0001.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/052/0002.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/052/0003.png
+- - ../../data/font_imgs/test_v1_S128F120_FS64/053/0001.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/053/0002.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/053/0003.png
+- - ../../data/font_imgs/test_v1_S128F120_FS64/054/0001.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/054/0002.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/054/0003.png
+- - ../../data/font_imgs/test_v1_S128F120_FS64/055/0001.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/055/0002.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/055/0003.png
+- - ../../data/font_imgs/test_v1_S128F120_FS64/056/0001.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/056/0002.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/056/0003.png
+- - ../../data/font_imgs/test_v1_S128F120_FS64/057/0001.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/057/0002.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/057/0003.png
+- - ../../data/font_imgs/test_v1_S128F120_FS64/058/0001.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/058/0002.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/058/0003.png
+- - ../../data/font_imgs/test_v1_S128F120_FS64/059/0001.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/059/0002.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/059/0003.png
+- - ../../data/font_imgs/test_v1_S128F120_FS64/060/0001.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/060/0002.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/060/0003.png
+- - ../../data/font_imgs/test_v1_S128F120_FS64/061/0001.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/061/0002.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/061/0003.png
+- - ../../data/font_imgs/test_v1_S128F120_FS64/062/0001.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/062/0002.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/062/0003.png
+- - ../../data/font_imgs/test_v1_S128F120_FS64/063/0001.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/063/0002.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/063/0003.png
+- - ../../data/font_imgs/test_v1_S128F120_FS64/064/0001.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/064/0002.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/064/0003.png
+- - ../../data/font_imgs/test_v1_S128F120_FS64/065/0001.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/065/0002.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/065/0003.png
+- - ../../data/font_imgs/test_v1_S128F120_FS64/066/0001.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/066/0002.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/066/0003.png
+- - ../../data/font_imgs/test_v1_S128F120_FS64/067/0001.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/067/0002.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/067/0003.png
+- - ../../data/font_imgs/test_v1_S128F120_FS64/068/0001.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/068/0002.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/068/0003.png
+- - ../../data/font_imgs/test_v1_S128F120_FS64/069/0001.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/069/0002.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/069/0003.png
+- - ../../data/font_imgs/test_v1_S128F120_FS64/070/0001.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/070/0002.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/070/0003.png
+- - ../../data/font_imgs/test_v1_S128F120_FS64/071/0001.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/071/0002.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/071/0003.png
+- - ../../data/font_imgs/test_v1_S128F120_FS64/072/0001.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/072/0002.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/072/0003.png
+- - ../../data/font_imgs/test_v1_S128F120_FS64/073/0001.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/073/0002.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/073/0003.png
+- - ../../data/font_imgs/test_v1_S128F120_FS64/074/0001.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/074/0002.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/074/0003.png
+- - ../../data/font_imgs/test_v1_S128F120_FS64/075/0001.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/075/0002.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/075/0003.png
+- - ../../data/font_imgs/test_v1_S128F120_FS64/076/0001.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/076/0002.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/076/0003.png
+- - ../../data/font_imgs/test_v1_S128F120_FS64/077/0001.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/077/0002.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/077/0003.png
+- - ../../data/font_imgs/test_v1_S128F120_FS64/078/0001.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/078/0002.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/078/0003.png
+- - ../../data/font_imgs/test_v1_S128F120_FS64/079/0001.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/079/0002.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/079/0003.png
+- - ../../data/font_imgs/test_v1_S128F120_FS64/080/0001.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/080/0002.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/080/0003.png
+- - ../../data/font_imgs/test_v1_S128F120_FS64/081/0001.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/081/0002.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/081/0003.png
+- - ../../data/font_imgs/test_v1_S128F120_FS64/082/0001.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/082/0002.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/082/0003.png
+- - ../../data/font_imgs/test_v1_S128F120_FS64/083/0001.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/083/0002.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/083/0003.png
+- - ../../data/font_imgs/test_v1_S128F120_FS64/084/0001.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/084/0002.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/084/0003.png
+- - ../../data/font_imgs/test_v1_S128F120_FS64/085/0001.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/085/0002.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/085/0003.png
+- - ../../data/font_imgs/test_v1_S128F120_FS64/086/0001.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/086/0002.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/086/0003.png
+- - ../../data/font_imgs/test_v1_S128F120_FS64/087/0001.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/087/0002.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/087/0003.png
+- - ../../data/font_imgs/test_v1_S128F120_FS64/088/0001.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/088/0002.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/088/0003.png
+- - ../../data/font_imgs/test_v1_S128F120_FS64/089/0001.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/089/0002.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/089/0003.png
+- - ../../data/font_imgs/test_v1_S128F120_FS64/090/0001.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/090/0002.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/090/0003.png
+- - ../../data/font_imgs/test_v1_S128F120_FS64/091/0001.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/091/0002.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/091/0003.png
+- - ../../data/font_imgs/test_v1_S128F120_FS64/092/0001.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/092/0002.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/092/0003.png
+- - ../../data/font_imgs/test_v1_S128F120_FS64/093/0001.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/093/0002.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/093/0003.png
+- - ../../data/font_imgs/test_v1_S128F120_FS64/094/0001.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/094/0002.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/094/0003.png
+- - ../../data/font_imgs/test_v1_S128F120_FS64/095/0001.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/095/0002.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/095/0003.png
+- - ../../data/font_imgs/test_v1_S128F120_FS64/096/0001.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/096/0002.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/096/0003.png
+- - ../../data/font_imgs/test_v1_S128F120_FS64/097/0001.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/097/0002.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/097/0003.png
+- - ../../data/font_imgs/test_v1_S128F120_FS64/098/0001.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/098/0002.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/098/0003.png
+- - ../../data/font_imgs/test_v1_S128F120_FS64/099/0001.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/099/0002.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/099/0003.png
+- - ../../data/font_imgs/test_v1_S128F120_FS64/100/0001.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/100/0002.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/100/0003.png
+- - ../../data/font_imgs/test_v1_S128F120_FS64/101/0001.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/101/0002.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/101/0003.png
+- - ../../data/font_imgs/test_v1_S128F120_FS64/102/0001.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/102/0002.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/102/0003.png
+- - ../../data/font_imgs/test_v1_S128F120_FS64/103/0001.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/103/0002.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/103/0003.png
+- - ../../data/font_imgs/test_v1_S128F120_FS64/104/0001.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/104/0002.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/104/0003.png
+- - ../../data/font_imgs/test_v1_S128F120_FS64/105/0001.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/105/0002.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/105/0003.png
+- - ../../data/font_imgs/test_v1_S128F120_FS64/106/0001.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/106/0002.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/106/0003.png
+- - ../../data/font_imgs/test_v1_S128F120_FS64/107/0001.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/107/0002.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/107/0003.png
+- - ../../data/font_imgs/test_v1_S128F120_FS64/108/0001.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/108/0002.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/108/0003.png
+- - ../../data/font_imgs/test_v1_S128F120_FS64/109/0001.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/109/0002.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/109/0003.png
+- - ../../data/font_imgs/test_v1_S128F120_FS64/110/0001.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/110/0002.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/110/0003.png
+- - ../../data/font_imgs/test_v1_S128F120_FS64/111/0001.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/111/0002.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/111/0003.png
+- - ../../data/font_imgs/test_v1_S128F120_FS64/112/0001.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/112/0002.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/112/0003.png
+- - ../../data/font_imgs/test_v1_S128F120_FS64/113/0001.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/113/0002.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/113/0003.png
+- - ../../data/font_imgs/test_v1_S128F120_FS64/114/0001.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/114/0002.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/114/0003.png
+- - ../../data/font_imgs/test_v1_S128F120_FS64/115/0001.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/115/0002.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/115/0003.png
+- - ../../data/font_imgs/test_v1_S128F120_FS64/116/0001.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/116/0002.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/116/0003.png
+- - ../../data/font_imgs/test_v1_S128F120_FS64/117/0001.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/117/0002.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/117/0003.png
+- - ../../data/font_imgs/test_v1_S128F120_FS64/118/0001.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/118/0002.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/118/0003.png
+- - ../../data/font_imgs/test_v1_S128F120_FS64/119/0001.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/119/0002.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/119/0003.png
+- - ../../data/font_imgs/test_v1_S128F120_FS64/120/0001.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/120/0002.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/120/0003.png
+- - ../../data/font_imgs/test_v1_S128F120_FS64/121/0001.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/121/0002.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/121/0003.png
+- - ../../data/font_imgs/test_v1_S128F120_FS64/122/0001.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/122/0002.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/122/0003.png
+- - ../../data/font_imgs/test_v1_S128F120_FS64/123/0001.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/123/0002.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/123/0003.png
+- - ../../data/font_imgs/test_v1_S128F120_FS64/124/0001.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/124/0002.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/124/0003.png
+- - ../../data/font_imgs/test_v1_S128F120_FS64/125/0001.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/125/0002.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/125/0003.png
+- - ../../data/font_imgs/test_v1_S128F120_FS64/126/0001.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/126/0002.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/126/0003.png
+- - ../../data/font_imgs/test_v1_S128F120_FS64/127/0001.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/127/0002.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/127/0003.png
+- - ../../data/font_imgs/test_v1_S128F120_FS64/128/0001.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/128/0002.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/128/0003.png
+- - ../../data/font_imgs/test_v1_S128F120_FS64/129/0001.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/129/0002.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/129/0003.png
+- - ../../data/font_imgs/test_v1_S128F120_FS64/130/0001.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/130/0002.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/130/0003.png
+- - ../../data/font_imgs/test_v1_S128F120_FS64/131/0001.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/131/0002.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/131/0003.png
+- - ../../data/font_imgs/test_v1_S128F120_FS64/132/0001.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/132/0002.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/132/0003.png
+- - ../../data/font_imgs/test_v1_S128F120_FS64/133/0001.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/133/0002.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/133/0003.png
+- - ../../data/font_imgs/test_v1_S128F120_FS64/134/0001.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/134/0002.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/134/0003.png
+- - ../../data/font_imgs/test_v1_S128F120_FS64/135/0001.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/135/0002.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/135/0003.png
+- - ../../data/font_imgs/test_v1_S128F120_FS64/136/0001.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/136/0002.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/136/0003.png
+- - ../../data/font_imgs/test_v1_S128F120_FS64/137/0001.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/137/0002.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/137/0003.png
+- - ../../data/font_imgs/test_v1_S128F120_FS64/138/0001.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/138/0002.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/138/0003.png
+- - ../../data/font_imgs/test_v1_S128F120_FS64/139/0001.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/139/0002.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/139/0003.png
+- - ../../data/font_imgs/test_v1_S128F120_FS64/140/0001.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/140/0002.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/140/0003.png
+- - ../../data/font_imgs/test_v1_S128F120_FS64/141/0001.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/141/0002.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/141/0003.png
+- - ../../data/font_imgs/test_v1_S128F120_FS64/142/0001.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/142/0002.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/142/0003.png
+- - ../../data/font_imgs/test_v1_S128F120_FS64/143/0001.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/143/0002.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/143/0003.png
+- - ../../data/font_imgs/test_v1_S128F120_FS64/144/0001.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/144/0002.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/144/0003.png
+- - ../../data/font_imgs/test_v1_S128F120_FS64/145/0001.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/145/0002.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/145/0003.png
+- - ../../data/font_imgs/test_v1_S128F120_FS64/146/0001.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/146/0002.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/146/0003.png
+- - ../../data/font_imgs/test_v1_S128F120_FS64/147/0001.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/147/0002.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/147/0003.png
+- - ../../data/font_imgs/test_v1_S128F120_FS64/148/0001.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/148/0002.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/148/0003.png
+- - ../../data/font_imgs/test_v1_S128F120_FS64/149/0001.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/149/0002.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/149/0003.png
+- - ../../data/font_imgs/test_v1_S128F120_FS64/150/0001.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/150/0002.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/150/0003.png
+- - ../../data/font_imgs/test_v1_S128F120_FS64/151/0001.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/151/0002.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/151/0003.png
+- - ../../data/font_imgs/test_v1_S128F120_FS64/152/0001.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/152/0002.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/152/0003.png
+- - ../../data/font_imgs/test_v1_S128F120_FS64/153/0001.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/153/0002.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/153/0003.png
+- - ../../data/font_imgs/test_v1_S128F120_FS64/154/0001.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/154/0002.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/154/0003.png
+- - ../../data/font_imgs/test_v1_S128F120_FS64/155/0001.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/155/0002.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/155/0003.png
+- - ../../data/font_imgs/test_v1_S128F120_FS64/156/0001.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/156/0002.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/156/0003.png
+- - ../../data/font_imgs/test_v1_S128F120_FS64/157/0001.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/157/0002.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/157/0003.png
+- - ../../data/font_imgs/test_v1_S128F120_FS64/158/0001.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/158/0002.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/158/0003.png
+- - ../../data/font_imgs/test_v1_S128F120_FS64/159/0001.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/159/0002.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/159/0003.png
+- - ../../data/font_imgs/test_v1_S128F120_FS64/160/0001.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/160/0002.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/160/0003.png
+- - ../../data/font_imgs/test_v1_S128F120_FS64/161/0001.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/161/0002.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/161/0003.png
+- - ../../data/font_imgs/test_v1_S128F120_FS64/162/0001.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/162/0002.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/162/0003.png
+- - ../../data/font_imgs/test_v1_S128F120_FS64/163/0001.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/163/0002.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/163/0003.png
+- - ../../data/font_imgs/test_v1_S128F120_FS64/164/0001.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/164/0002.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/164/0003.png
+- - ../../data/font_imgs/test_v1_S128F120_FS64/165/0001.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/165/0002.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/165/0003.png
+- - ../../data/font_imgs/test_v1_S128F120_FS64/166/0001.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/166/0002.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/166/0003.png
+- - ../../data/font_imgs/test_v1_S128F120_FS64/167/0001.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/167/0002.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/167/0003.png
+- - ../../data/font_imgs/test_v1_S128F120_FS64/168/0001.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/168/0002.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/168/0003.png
+- - ../../data/font_imgs/test_v1_S128F120_FS64/169/0001.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/169/0002.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/169/0003.png
+- - ../../data/font_imgs/test_v1_S128F120_FS64/170/0001.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/170/0002.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/170/0003.png
+- - ../../data/font_imgs/test_v1_S128F120_FS64/171/0001.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/171/0002.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/171/0003.png
+- - ../../data/font_imgs/test_v1_S128F120_FS64/172/0001.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/172/0002.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/172/0003.png
+- - ../../data/font_imgs/test_v1_S128F120_FS64/173/0001.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/173/0002.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/173/0003.png
+- - ../../data/font_imgs/test_v1_S128F120_FS64/174/0001.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/174/0002.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/174/0003.png
+- - ../../data/font_imgs/test_v1_S128F120_FS64/175/0001.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/175/0002.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/175/0003.png
+- - ../../data/font_imgs/test_v1_S128F120_FS64/176/0001.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/176/0002.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/176/0003.png
+- - ../../data/font_imgs/test_v1_S128F120_FS64/177/0001.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/177/0002.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/177/0003.png
+- - ../../data/font_imgs/test_v1_S128F120_FS64/178/0001.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/178/0002.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/178/0003.png
+- - ../../data/font_imgs/test_v1_S128F120_FS64/179/0001.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/179/0002.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/179/0003.png
+- - ../../data/font_imgs/test_v1_S128F120_FS64/180/0001.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/180/0002.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/180/0003.png
+- - ../../data/font_imgs/test_v1_S128F120_FS64/181/0001.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/181/0002.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/181/0003.png
+- - ../../data/font_imgs/test_v1_S128F120_FS64/182/0001.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/182/0002.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/182/0003.png
+- - ../../data/font_imgs/test_v1_S128F120_FS64/183/0001.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/183/0002.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/183/0003.png
+- - ../../data/font_imgs/test_v1_S128F120_FS64/184/0001.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/184/0002.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/184/0003.png
+- - ../../data/font_imgs/test_v1_S128F120_FS64/185/0001.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/185/0002.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/185/0003.png
+- - ../../data/font_imgs/test_v1_S128F120_FS64/186/0001.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/186/0002.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/186/0003.png
+- - ../../data/font_imgs/test_v1_S128F120_FS64/187/0001.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/187/0002.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/187/0003.png
+- - ../../data/font_imgs/test_v1_S128F120_FS64/188/0001.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/188/0002.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/188/0003.png
+- - ../../data/font_imgs/test_v1_S128F120_FS64/189/0001.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/189/0002.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/189/0003.png
+- - ../../data/font_imgs/test_v1_S128F120_FS64/190/0001.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/190/0002.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/190/0003.png
+- - ../../data/font_imgs/test_v1_S128F120_FS64/191/0001.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/191/0002.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/191/0003.png
+- - ../../data/font_imgs/test_v1_S128F120_FS64/192/0001.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/192/0002.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/192/0003.png
+- - ../../data/font_imgs/test_v1_S128F120_FS64/193/0001.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/193/0002.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/193/0003.png
+- - ../../data/font_imgs/test_v1_S128F120_FS64/194/0001.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/194/0002.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/194/0003.png
+- - ../../data/font_imgs/test_v1_S128F120_FS64/195/0001.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/195/0002.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/195/0003.png
+- - ../../data/font_imgs/test_v1_S128F120_FS64/196/0001.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/196/0002.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/196/0003.png
+- - ../../data/font_imgs/test_v1_S128F120_FS64/197/0001.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/197/0002.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/197/0003.png
+- - ../../data/font_imgs/test_v1_S128F120_FS64/198/0001.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/198/0002.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/198/0003.png
+- - ../../data/font_imgs/test_v1_S128F120_FS64/199/0001.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/199/0002.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/199/0003.png
+- - ../../data/font_imgs/test_v1_S128F120_FS64/200/0001.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/200/0002.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/200/0003.png
+- - ../../data/font_imgs/test_v1_S128F120_FS64/201/0001.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/201/0002.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/201/0003.png
+- - ../../data/font_imgs/test_v1_S128F120_FS64/202/0001.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/202/0002.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/202/0003.png
+- - ../../data/font_imgs/test_v1_S128F120_FS64/203/0001.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/203/0002.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/203/0003.png
+- - ../../data/font_imgs/test_v1_S128F120_FS64/204/0001.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/204/0002.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/204/0003.png
+- - ../../data/font_imgs/test_v1_S128F120_FS64/205/0001.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/205/0002.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/205/0003.png
+- - ../../data/font_imgs/test_v1_S128F120_FS64/206/0001.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/206/0002.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/206/0003.png
+- - ../../data/font_imgs/test_v1_S128F120_FS64/207/0001.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/207/0002.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/207/0003.png
+- - ../../data/font_imgs/test_v1_S128F120_FS64/208/0001.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/208/0002.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/208/0003.png
+- - ../../data/font_imgs/test_v1_S128F120_FS64/209/0001.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/209/0002.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/209/0003.png
+- - ../../data/font_imgs/test_v1_S128F120_FS64/210/0001.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/210/0002.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/210/0003.png
+- - ../../data/font_imgs/test_v1_S128F120_FS64/211/0001.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/211/0002.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/211/0003.png
+- - ../../data/font_imgs/test_v1_S128F120_FS64/212/0001.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/212/0002.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/212/0003.png
+- - ../../data/font_imgs/test_v1_S128F120_FS64/213/0001.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/213/0002.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/213/0003.png
+- - ../../data/font_imgs/test_v1_S128F120_FS64/214/0001.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/214/0002.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/214/0003.png
+- - ../../data/font_imgs/test_v1_S128F120_FS64/215/0001.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/215/0002.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/215/0003.png
+- - ../../data/font_imgs/test_v1_S128F120_FS64/216/0001.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/216/0002.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/216/0003.png
+- - ../../data/font_imgs/test_v1_S128F120_FS64/217/0001.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/217/0002.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/217/0003.png
+- - ../../data/font_imgs/test_v1_S128F120_FS64/218/0001.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/218/0002.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/218/0003.png
+- - ../../data/font_imgs/test_v1_S128F120_FS64/219/0001.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/219/0002.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/219/0003.png
+- - ../../data/font_imgs/test_v1_S128F120_FS64/220/0001.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/220/0002.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/220/0003.png
+- - ../../data/font_imgs/test_v1_S128F120_FS64/221/0001.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/221/0002.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/221/0003.png
+- - ../../data/font_imgs/test_v1_S128F120_FS64/222/0001.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/222/0002.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/222/0003.png
+- - ../../data/font_imgs/test_v1_S128F120_FS64/223/0001.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/223/0002.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/223/0003.png
+- - ../../data/font_imgs/test_v1_S128F120_FS64/224/0001.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/224/0002.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/224/0003.png
+- - ../../data/font_imgs/test_v1_S128F120_FS64/225/0001.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/225/0002.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/225/0003.png
+- - ../../data/font_imgs/test_v1_S128F120_FS64/226/0001.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/226/0002.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/226/0003.png
+- - ../../data/font_imgs/test_v1_S128F120_FS64/227/0001.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/227/0002.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/227/0003.png
+- - ../../data/font_imgs/test_v1_S128F120_FS64/228/0001.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/228/0002.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/228/0003.png
+- - ../../data/font_imgs/test_v1_S128F120_FS64/229/0001.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/229/0002.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/229/0003.png
+- - ../../data/font_imgs/test_v1_S128F120_FS64/230/0001.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/230/0002.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/230/0003.png
+- - ../../data/font_imgs/test_v1_S128F120_FS64/231/0001.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/231/0002.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/231/0003.png
+- - ../../data/font_imgs/test_v1_S128F120_FS64/232/0001.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/232/0002.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/232/0003.png
+- - ../../data/font_imgs/test_v1_S128F120_FS64/233/0001.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/233/0002.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/233/0003.png
+- - ../../data/font_imgs/test_v1_S128F120_FS64/234/0001.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/234/0002.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/234/0003.png
+- - ../../data/font_imgs/test_v1_S128F120_FS64/235/0001.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/235/0002.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/235/0003.png
+- - ../../data/font_imgs/test_v1_S128F120_FS64/236/0001.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/236/0002.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/236/0003.png
+- - ../../data/font_imgs/test_v1_S128F120_FS64/237/0001.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/237/0002.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/237/0003.png
+- - ../../data/font_imgs/test_v1_S128F120_FS64/238/0001.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/238/0002.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/238/0003.png
+- - ../../data/font_imgs/test_v1_S128F120_FS64/239/0001.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/239/0002.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/239/0003.png
+- - ../../data/font_imgs/test_v1_S128F120_FS64/240/0001.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/240/0002.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/240/0003.png
+- - ../../data/font_imgs/test_v1_S128F120_FS64/241/0001.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/241/0002.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/241/0003.png
+- - ../../data/font_imgs/test_v1_S128F120_FS64/242/0001.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/242/0002.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/242/0003.png
+- - ../../data/font_imgs/test_v1_S128F120_FS64/243/0001.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/243/0002.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/243/0003.png
+- - ../../data/font_imgs/test_v1_S128F120_FS64/244/0001.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/244/0002.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/244/0003.png
+- - ../../data/font_imgs/test_v1_S128F120_FS64/245/0001.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/245/0002.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/245/0003.png
+- - ../../data/font_imgs/test_v1_S128F120_FS64/246/0001.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/246/0002.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/246/0003.png
+- - ../../data/font_imgs/test_v1_S128F120_FS64/247/0001.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/247/0002.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/247/0003.png
+- - ../../data/font_imgs/test_v1_S128F120_FS64/248/0001.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/248/0002.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/248/0003.png
+- - ../../data/font_imgs/test_v1_S128F120_FS64/249/0001.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/249/0002.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/249/0003.png
+- - ../../data/font_imgs/test_v1_S128F120_FS64/250/0001.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/250/0002.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/250/0003.png
+- - ../../data/font_imgs/test_v1_S128F120_FS64/251/0001.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/251/0002.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/251/0003.png
+- - ../../data/font_imgs/test_v1_S128F120_FS64/252/0001.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/252/0002.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/252/0003.png
+- - ../../data/font_imgs/test_v1_S128F120_FS64/253/0001.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/253/0002.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/253/0003.png
+- - ../../data/font_imgs/test_v1_S128F120_FS64/254/0001.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/254/0002.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/254/0003.png
+- - ../../data/font_imgs/test_v1_S128F120_FS64/255/0001.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/255/0002.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/255/0003.png
+- - ../../data/font_imgs/test_v1_S128F120_FS64/256/0001.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/256/0002.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/256/0003.png
+- - ../../data/font_imgs/test_v1_S128F120_FS64/257/0001.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/257/0002.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/257/0003.png
+- - ../../data/font_imgs/test_v1_S128F120_FS64/258/0001.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/258/0002.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/258/0003.png
+- - ../../data/font_imgs/test_v1_S128F120_FS64/259/0001.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/259/0002.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/259/0003.png
+- - ../../data/font_imgs/test_v1_S128F120_FS64/260/0001.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/260/0002.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/260/0003.png
+- - ../../data/font_imgs/test_v1_S128F120_FS64/261/0001.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/261/0002.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/261/0003.png
+- - ../../data/font_imgs/test_v1_S128F120_FS64/262/0001.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/262/0002.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/262/0003.png
+- - ../../data/font_imgs/test_v1_S128F120_FS64/263/0001.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/263/0002.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/263/0003.png
+- - ../../data/font_imgs/test_v1_S128F120_FS64/264/0001.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/264/0002.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/264/0003.png
+- - ../../data/font_imgs/test_v1_S128F120_FS64/265/0001.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/265/0002.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/265/0003.png
+- - ../../data/font_imgs/test_v1_S128F120_FS64/266/0001.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/266/0002.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/266/0003.png
+- - ../../data/font_imgs/test_v1_S128F120_FS64/267/0001.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/267/0002.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/267/0003.png
+- - ../../data/font_imgs/test_v1_S128F120_FS64/268/0001.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/268/0002.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/268/0003.png
+- - ../../data/font_imgs/test_v1_S128F120_FS64/269/0001.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/269/0002.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/269/0003.png
+- - ../../data/font_imgs/test_v1_S128F120_FS64/270/0001.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/270/0002.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/270/0003.png
+- - ../../data/font_imgs/test_v1_S128F120_FS64/271/0001.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/271/0002.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/271/0003.png
+- - ../../data/font_imgs/test_v1_S128F120_FS64/272/0001.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/272/0002.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/272/0003.png
+- - ../../data/font_imgs/test_v1_S128F120_FS64/273/0001.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/273/0002.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/273/0003.png
+- - ../../data/font_imgs/test_v1_S128F120_FS64/274/0001.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/274/0002.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/274/0003.png
+- - ../../data/font_imgs/test_v1_S128F120_FS64/275/0001.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/275/0002.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/275/0003.png
+- - ../../data/font_imgs/test_v1_S128F120_FS64/276/0001.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/276/0002.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/276/0003.png
+- - ../../data/font_imgs/test_v1_S128F120_FS64/277/0001.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/277/0002.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/277/0003.png
+- - ../../data/font_imgs/test_v1_S128F120_FS64/278/0001.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/278/0002.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/278/0003.png
+- - ../../data/font_imgs/test_v1_S128F120_FS64/279/0001.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/279/0002.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/279/0003.png
+- - ../../data/font_imgs/test_v1_S128F120_FS64/280/0001.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/280/0002.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/280/0003.png
+- - ../../data/font_imgs/test_v1_S128F120_FS64/281/0001.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/281/0002.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/281/0003.png
+- - ../../data/font_imgs/test_v1_S128F120_FS64/282/0001.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/282/0002.png
+  - ../../data/font_imgs/test_v1_S128F120_FS64/282/0003.png
+style_image_root: ../../data/font_imgs/test_v1_S128F120_FS64
+style_image_size: !!python/tuple
+- 96
+- 96
+style_start_channel: 64
+svg_coefficient: 0.1
+svg_emb_len: 9
+svg_root: ../../data/my_vecfont_dataset/chn/UFSC64_v1
+t_end: null
+t_start: null
+target_image_path:
+- ../../data/font_imgs/test_v1_S128F120_FS64/000/0000.png
+- ../../data/font_imgs/test_v1_S128F120_FS64/001/0000.png
+- ../../data/font_imgs/test_v1_S128F120_FS64/002/0000.png
+- ../../data/font_imgs/test_v1_S128F120_FS64/003/0000.png
+- ../../data/font_imgs/test_v1_S128F120_FS64/004/0000.png
+- ../../data/font_imgs/test_v1_S128F120_FS64/005/0000.png
+- ../../data/font_imgs/test_v1_S128F120_FS64/006/0000.png
+- ../../data/font_imgs/test_v1_S128F120_FS64/007/0000.png
+- ../../data/font_imgs/test_v1_S128F120_FS64/008/0000.png
+- ../../data/font_imgs/test_v1_S128F120_FS64/009/0000.png
+- ../../data/font_imgs/test_v1_S128F120_FS64/010/0000.png
+- ../../data/font_imgs/test_v1_S128F120_FS64/011/0000.png
+- ../../data/font_imgs/test_v1_S128F120_FS64/012/0000.png
+- ../../data/font_imgs/test_v1_S128F120_FS64/013/0000.png
+- ../../data/font_imgs/test_v1_S128F120_FS64/014/0000.png
+- ../../data/font_imgs/test_v1_S128F120_FS64/015/0000.png
+- ../../data/font_imgs/test_v1_S128F120_FS64/016/0000.png
+- ../../data/font_imgs/test_v1_S128F120_FS64/017/0000.png
+- ../../data/font_imgs/test_v1_S128F120_FS64/018/0000.png
+- ../../data/font_imgs/test_v1_S128F120_FS64/019/0000.png
+- ../../data/font_imgs/test_v1_S128F120_FS64/020/0000.png
+- ../../data/font_imgs/test_v1_S128F120_FS64/021/0000.png
+- ../../data/font_imgs/test_v1_S128F120_FS64/022/0000.png
+- ../../data/font_imgs/test_v1_S128F120_FS64/023/0000.png
+- ../../data/font_imgs/test_v1_S128F120_FS64/024/0000.png
+- ../../data/font_imgs/test_v1_S128F120_FS64/025/0000.png
+- ../../data/font_imgs/test_v1_S128F120_FS64/026/0000.png
+- ../../data/font_imgs/test_v1_S128F120_FS64/027/0000.png
+- ../../data/font_imgs/test_v1_S128F120_FS64/028/0000.png
+- ../../data/font_imgs/test_v1_S128F120_FS64/029/0000.png
+- ../../data/font_imgs/test_v1_S128F120_FS64/030/0000.png
+- ../../data/font_imgs/test_v1_S128F120_FS64/031/0000.png
+- ../../data/font_imgs/test_v1_S128F120_FS64/032/0000.png
+- ../../data/font_imgs/test_v1_S128F120_FS64/033/0000.png
+- ../../data/font_imgs/test_v1_S128F120_FS64/034/0000.png
+- ../../data/font_imgs/test_v1_S128F120_FS64/035/0000.png
+- ../../data/font_imgs/test_v1_S128F120_FS64/036/0000.png
+- ../../data/font_imgs/test_v1_S128F120_FS64/037/0000.png
+- ../../data/font_imgs/test_v1_S128F120_FS64/038/0000.png
+- ../../data/font_imgs/test_v1_S128F120_FS64/039/0000.png
+- ../../data/font_imgs/test_v1_S128F120_FS64/040/0000.png
+- ../../data/font_imgs/test_v1_S128F120_FS64/041/0000.png
+- ../../data/font_imgs/test_v1_S128F120_FS64/042/0000.png
+- ../../data/font_imgs/test_v1_S128F120_FS64/043/0000.png
+- ../../data/font_imgs/test_v1_S128F120_FS64/044/0000.png
+- ../../data/font_imgs/test_v1_S128F120_FS64/045/0000.png
+- ../../data/font_imgs/test_v1_S128F120_FS64/046/0000.png
+- ../../data/font_imgs/test_v1_S128F120_FS64/047/0000.png
+- ../../data/font_imgs/test_v1_S128F120_FS64/048/0000.png
+- ../../data/font_imgs/test_v1_S128F120_FS64/049/0000.png
+- ../../data/font_imgs/test_v1_S128F120_FS64/050/0000.png
+- ../../data/font_imgs/test_v1_S128F120_FS64/051/0000.png
+- ../../data/font_imgs/test_v1_S128F120_FS64/052/0000.png
+- ../../data/font_imgs/test_v1_S128F120_FS64/053/0000.png
+- ../../data/font_imgs/test_v1_S128F120_FS64/054/0000.png
+- ../../data/font_imgs/test_v1_S128F120_FS64/055/0000.png
+- ../../data/font_imgs/test_v1_S128F120_FS64/056/0000.png
+- ../../data/font_imgs/test_v1_S128F120_FS64/057/0000.png
+- ../../data/font_imgs/test_v1_S128F120_FS64/058/0000.png
+- ../../data/font_imgs/test_v1_S128F120_FS64/059/0000.png
+- ../../data/font_imgs/test_v1_S128F120_FS64/060/0000.png
+- ../../data/font_imgs/test_v1_S128F120_FS64/061/0000.png
+- ../../data/font_imgs/test_v1_S128F120_FS64/062/0000.png
+- ../../data/font_imgs/test_v1_S128F120_FS64/063/0000.png
+- ../../data/font_imgs/test_v1_S128F120_FS64/064/0000.png
+- ../../data/font_imgs/test_v1_S128F120_FS64/065/0000.png
+- ../../data/font_imgs/test_v1_S128F120_FS64/066/0000.png
+- ../../data/font_imgs/test_v1_S128F120_FS64/067/0000.png
+- ../../data/font_imgs/test_v1_S128F120_FS64/068/0000.png
+- ../../data/font_imgs/test_v1_S128F120_FS64/069/0000.png
+- ../../data/font_imgs/test_v1_S128F120_FS64/070/0000.png
+- ../../data/font_imgs/test_v1_S128F120_FS64/071/0000.png
+- ../../data/font_imgs/test_v1_S128F120_FS64/072/0000.png
+- ../../data/font_imgs/test_v1_S128F120_FS64/073/0000.png
+- ../../data/font_imgs/test_v1_S128F120_FS64/074/0000.png
+- ../../data/font_imgs/test_v1_S128F120_FS64/075/0000.png
+- ../../data/font_imgs/test_v1_S128F120_FS64/076/0000.png
+- ../../data/font_imgs/test_v1_S128F120_FS64/077/0000.png
+- ../../data/font_imgs/test_v1_S128F120_FS64/078/0000.png
+- ../../data/font_imgs/test_v1_S128F120_FS64/079/0000.png
+- ../../data/font_imgs/test_v1_S128F120_FS64/080/0000.png
+- ../../data/font_imgs/test_v1_S128F120_FS64/081/0000.png
+- ../../data/font_imgs/test_v1_S128F120_FS64/082/0000.png
+- ../../data/font_imgs/test_v1_S128F120_FS64/083/0000.png
+- ../../data/font_imgs/test_v1_S128F120_FS64/084/0000.png
+- ../../data/font_imgs/test_v1_S128F120_FS64/085/0000.png
+- ../../data/font_imgs/test_v1_S128F120_FS64/086/0000.png
+- ../../data/font_imgs/test_v1_S128F120_FS64/087/0000.png
+- ../../data/font_imgs/test_v1_S128F120_FS64/088/0000.png
+- ../../data/font_imgs/test_v1_S128F120_FS64/089/0000.png
+- ../../data/font_imgs/test_v1_S128F120_FS64/090/0000.png
+- ../../data/font_imgs/test_v1_S128F120_FS64/091/0000.png
+- ../../data/font_imgs/test_v1_S128F120_FS64/092/0000.png
+- ../../data/font_imgs/test_v1_S128F120_FS64/093/0000.png
+- ../../data/font_imgs/test_v1_S128F120_FS64/094/0000.png
+- ../../data/font_imgs/test_v1_S128F120_FS64/095/0000.png
+- ../../data/font_imgs/test_v1_S128F120_FS64/096/0000.png
+- ../../data/font_imgs/test_v1_S128F120_FS64/097/0000.png
+- ../../data/font_imgs/test_v1_S128F120_FS64/098/0000.png
+- ../../data/font_imgs/test_v1_S128F120_FS64/099/0000.png
+- ../../data/font_imgs/test_v1_S128F120_FS64/100/0000.png
+- ../../data/font_imgs/test_v1_S128F120_FS64/101/0000.png
+- ../../data/font_imgs/test_v1_S128F120_FS64/102/0000.png
+- ../../data/font_imgs/test_v1_S128F120_FS64/103/0000.png
+- ../../data/font_imgs/test_v1_S128F120_FS64/104/0000.png
+- ../../data/font_imgs/test_v1_S128F120_FS64/105/0000.png
+- ../../data/font_imgs/test_v1_S128F120_FS64/106/0000.png
+- ../../data/font_imgs/test_v1_S128F120_FS64/107/0000.png
+- ../../data/font_imgs/test_v1_S128F120_FS64/108/0000.png
+- ../../data/font_imgs/test_v1_S128F120_FS64/109/0000.png
+- ../../data/font_imgs/test_v1_S128F120_FS64/110/0000.png
+- ../../data/font_imgs/test_v1_S128F120_FS64/111/0000.png
+- ../../data/font_imgs/test_v1_S128F120_FS64/112/0000.png
+- ../../data/font_imgs/test_v1_S128F120_FS64/113/0000.png
+- ../../data/font_imgs/test_v1_S128F120_FS64/114/0000.png
+- ../../data/font_imgs/test_v1_S128F120_FS64/115/0000.png
+- ../../data/font_imgs/test_v1_S128F120_FS64/116/0000.png
+- ../../data/font_imgs/test_v1_S128F120_FS64/117/0000.png
+- ../../data/font_imgs/test_v1_S128F120_FS64/118/0000.png
+- ../../data/font_imgs/test_v1_S128F120_FS64/119/0000.png
+- ../../data/font_imgs/test_v1_S128F120_FS64/120/0000.png
+- ../../data/font_imgs/test_v1_S128F120_FS64/121/0000.png
+- ../../data/font_imgs/test_v1_S128F120_FS64/122/0000.png
+- ../../data/font_imgs/test_v1_S128F120_FS64/123/0000.png
+- ../../data/font_imgs/test_v1_S128F120_FS64/124/0000.png
+- ../../data/font_imgs/test_v1_S128F120_FS64/125/0000.png
+- ../../data/font_imgs/test_v1_S128F120_FS64/126/0000.png
+- ../../data/font_imgs/test_v1_S128F120_FS64/127/0000.png
+- ../../data/font_imgs/test_v1_S128F120_FS64/128/0000.png
+- ../../data/font_imgs/test_v1_S128F120_FS64/129/0000.png
+- ../../data/font_imgs/test_v1_S128F120_FS64/130/0000.png
+- ../../data/font_imgs/test_v1_S128F120_FS64/131/0000.png
+- ../../data/font_imgs/test_v1_S128F120_FS64/132/0000.png
+- ../../data/font_imgs/test_v1_S128F120_FS64/133/0000.png
+- ../../data/font_imgs/test_v1_S128F120_FS64/134/0000.png
+- ../../data/font_imgs/test_v1_S128F120_FS64/135/0000.png
+- ../../data/font_imgs/test_v1_S128F120_FS64/136/0000.png
+- ../../data/font_imgs/test_v1_S128F120_FS64/137/0000.png
+- ../../data/font_imgs/test_v1_S128F120_FS64/138/0000.png
+- ../../data/font_imgs/test_v1_S128F120_FS64/139/0000.png
+- ../../data/font_imgs/test_v1_S128F120_FS64/140/0000.png
+- ../../data/font_imgs/test_v1_S128F120_FS64/141/0000.png
+- ../../data/font_imgs/test_v1_S128F120_FS64/142/0000.png
+- ../../data/font_imgs/test_v1_S128F120_FS64/143/0000.png
+- ../../data/font_imgs/test_v1_S128F120_FS64/144/0000.png
+- ../../data/font_imgs/test_v1_S128F120_FS64/145/0000.png
+- ../../data/font_imgs/test_v1_S128F120_FS64/146/0000.png
+- ../../data/font_imgs/test_v1_S128F120_FS64/147/0000.png
+- ../../data/font_imgs/test_v1_S128F120_FS64/148/0000.png
+- ../../data/font_imgs/test_v1_S128F120_FS64/149/0000.png
+- ../../data/font_imgs/test_v1_S128F120_FS64/150/0000.png
+- ../../data/font_imgs/test_v1_S128F120_FS64/151/0000.png
+- ../../data/font_imgs/test_v1_S128F120_FS64/152/0000.png
+- ../../data/font_imgs/test_v1_S128F120_FS64/153/0000.png
+- ../../data/font_imgs/test_v1_S128F120_FS64/154/0000.png
+- ../../data/font_imgs/test_v1_S128F120_FS64/155/0000.png
+- ../../data/font_imgs/test_v1_S128F120_FS64/156/0000.png
+- ../../data/font_imgs/test_v1_S128F120_FS64/157/0000.png
+- ../../data/font_imgs/test_v1_S128F120_FS64/158/0000.png
+- ../../data/font_imgs/test_v1_S128F120_FS64/159/0000.png
+- ../../data/font_imgs/test_v1_S128F120_FS64/160/0000.png
+- ../../data/font_imgs/test_v1_S128F120_FS64/161/0000.png
+- ../../data/font_imgs/test_v1_S128F120_FS64/162/0000.png
+- ../../data/font_imgs/test_v1_S128F120_FS64/163/0000.png
+- ../../data/font_imgs/test_v1_S128F120_FS64/164/0000.png
+- ../../data/font_imgs/test_v1_S128F120_FS64/165/0000.png
+- ../../data/font_imgs/test_v1_S128F120_FS64/166/0000.png
+- ../../data/font_imgs/test_v1_S128F120_FS64/167/0000.png
+- ../../data/font_imgs/test_v1_S128F120_FS64/168/0000.png
+- ../../data/font_imgs/test_v1_S128F120_FS64/169/0000.png
+- ../../data/font_imgs/test_v1_S128F120_FS64/170/0000.png
+- ../../data/font_imgs/test_v1_S128F120_FS64/171/0000.png
+- ../../data/font_imgs/test_v1_S128F120_FS64/172/0000.png
+- ../../data/font_imgs/test_v1_S128F120_FS64/173/0000.png
+- ../../data/font_imgs/test_v1_S128F120_FS64/174/0000.png
+- ../../data/font_imgs/test_v1_S128F120_FS64/175/0000.png
+- ../../data/font_imgs/test_v1_S128F120_FS64/176/0000.png
+- ../../data/font_imgs/test_v1_S128F120_FS64/177/0000.png
+- ../../data/font_imgs/test_v1_S128F120_FS64/178/0000.png
+- ../../data/font_imgs/test_v1_S128F120_FS64/179/0000.png
+- ../../data/font_imgs/test_v1_S128F120_FS64/180/0000.png
+- ../../data/font_imgs/test_v1_S128F120_FS64/181/0000.png
+- ../../data/font_imgs/test_v1_S128F120_FS64/182/0000.png
+- ../../data/font_imgs/test_v1_S128F120_FS64/183/0000.png
+- ../../data/font_imgs/test_v1_S128F120_FS64/184/0000.png
+- ../../data/font_imgs/test_v1_S128F120_FS64/185/0000.png
+- ../../data/font_imgs/test_v1_S128F120_FS64/186/0000.png
+- ../../data/font_imgs/test_v1_S128F120_FS64/187/0000.png
+- ../../data/font_imgs/test_v1_S128F120_FS64/188/0000.png
+- ../../data/font_imgs/test_v1_S128F120_FS64/189/0000.png
+- ../../data/font_imgs/test_v1_S128F120_FS64/190/0000.png
+- ../../data/font_imgs/test_v1_S128F120_FS64/191/0000.png
+- ../../data/font_imgs/test_v1_S128F120_FS64/192/0000.png
+- ../../data/font_imgs/test_v1_S128F120_FS64/193/0000.png
+- ../../data/font_imgs/test_v1_S128F120_FS64/194/0000.png
+- ../../data/font_imgs/test_v1_S128F120_FS64/195/0000.png
+- ../../data/font_imgs/test_v1_S128F120_FS64/196/0000.png
+- ../../data/font_imgs/test_v1_S128F120_FS64/197/0000.png
+- ../../data/font_imgs/test_v1_S128F120_FS64/198/0000.png
+- ../../data/font_imgs/test_v1_S128F120_FS64/199/0000.png
+- ../../data/font_imgs/test_v1_S128F120_FS64/200/0000.png
+- ../../data/font_imgs/test_v1_S128F120_FS64/201/0000.png
+- ../../data/font_imgs/test_v1_S128F120_FS64/202/0000.png
+- ../../data/font_imgs/test_v1_S128F120_FS64/203/0000.png
+- ../../data/font_imgs/test_v1_S128F120_FS64/204/0000.png
+- ../../data/font_imgs/test_v1_S128F120_FS64/205/0000.png
+- ../../data/font_imgs/test_v1_S128F120_FS64/206/0000.png
+- ../../data/font_imgs/test_v1_S128F120_FS64/207/0000.png
+- ../../data/font_imgs/test_v1_S128F120_FS64/208/0000.png
+- ../../data/font_imgs/test_v1_S128F120_FS64/209/0000.png
+- ../../data/font_imgs/test_v1_S128F120_FS64/210/0000.png
+- ../../data/font_imgs/test_v1_S128F120_FS64/211/0000.png
+- ../../data/font_imgs/test_v1_S128F120_FS64/212/0000.png
+- ../../data/font_imgs/test_v1_S128F120_FS64/213/0000.png
+- ../../data/font_imgs/test_v1_S128F120_FS64/214/0000.png
+- ../../data/font_imgs/test_v1_S128F120_FS64/215/0000.png
+- ../../data/font_imgs/test_v1_S128F120_FS64/216/0000.png
+- ../../data/font_imgs/test_v1_S128F120_FS64/217/0000.png
+- ../../data/font_imgs/test_v1_S128F120_FS64/218/0000.png
+- ../../data/font_imgs/test_v1_S128F120_FS64/219/0000.png
+- ../../data/font_imgs/test_v1_S128F120_FS64/220/0000.png
+- ../../data/font_imgs/test_v1_S128F120_FS64/221/0000.png
+- ../../data/font_imgs/test_v1_S128F120_FS64/222/0000.png
+- ../../data/font_imgs/test_v1_S128F120_FS64/223/0000.png
+- ../../data/font_imgs/test_v1_S128F120_FS64/224/0000.png
+- ../../data/font_imgs/test_v1_S128F120_FS64/225/0000.png
+- ../../data/font_imgs/test_v1_S128F120_FS64/226/0000.png
+- ../../data/font_imgs/test_v1_S128F120_FS64/227/0000.png
+- ../../data/font_imgs/test_v1_S128F120_FS64/228/0000.png
+- ../../data/font_imgs/test_v1_S128F120_FS64/229/0000.png
+- ../../data/font_imgs/test_v1_S128F120_FS64/230/0000.png
+- ../../data/font_imgs/test_v1_S128F120_FS64/231/0000.png
+- ../../data/font_imgs/test_v1_S128F120_FS64/232/0000.png
+- ../../data/font_imgs/test_v1_S128F120_FS64/233/0000.png
+- ../../data/font_imgs/test_v1_S128F120_FS64/234/0000.png
+- ../../data/font_imgs/test_v1_S128F120_FS64/235/0000.png
+- ../../data/font_imgs/test_v1_S128F120_FS64/236/0000.png
+- ../../data/font_imgs/test_v1_S128F120_FS64/237/0000.png
+- ../../data/font_imgs/test_v1_S128F120_FS64/238/0000.png
+- ../../data/font_imgs/test_v1_S128F120_FS64/239/0000.png
+- ../../data/font_imgs/test_v1_S128F120_FS64/240/0000.png
+- ../../data/font_imgs/test_v1_S128F120_FS64/241/0000.png
+- ../../data/font_imgs/test_v1_S128F120_FS64/242/0000.png
+- ../../data/font_imgs/test_v1_S128F120_FS64/243/0000.png
+- ../../data/font_imgs/test_v1_S128F120_FS64/244/0000.png
+- ../../data/font_imgs/test_v1_S128F120_FS64/245/0000.png
+- ../../data/font_imgs/test_v1_S128F120_FS64/246/0000.png
+- ../../data/font_imgs/test_v1_S128F120_FS64/247/0000.png
+- ../../data/font_imgs/test_v1_S128F120_FS64/248/0000.png
+- ../../data/font_imgs/test_v1_S128F120_FS64/249/0000.png
+- ../../data/font_imgs/test_v1_S128F120_FS64/250/0000.png
+- ../../data/font_imgs/test_v1_S128F120_FS64/251/0000.png
+- ../../data/font_imgs/test_v1_S128F120_FS64/252/0000.png
+- ../../data/font_imgs/test_v1_S128F120_FS64/253/0000.png
+- ../../data/font_imgs/test_v1_S128F120_FS64/254/0000.png
+- ../../data/font_imgs/test_v1_S128F120_FS64/255/0000.png
+- ../../data/font_imgs/test_v1_S128F120_FS64/256/0000.png
+- ../../data/font_imgs/test_v1_S128F120_FS64/257/0000.png
+- ../../data/font_imgs/test_v1_S128F120_FS64/258/0000.png
+- ../../data/font_imgs/test_v1_S128F120_FS64/259/0000.png
+- ../../data/font_imgs/test_v1_S128F120_FS64/260/0000.png
+- ../../data/font_imgs/test_v1_S128F120_FS64/261/0000.png
+- ../../data/font_imgs/test_v1_S128F120_FS64/262/0000.png
+- ../../data/font_imgs/test_v1_S128F120_FS64/263/0000.png
+- ../../data/font_imgs/test_v1_S128F120_FS64/264/0000.png
+- ../../data/font_imgs/test_v1_S128F120_FS64/265/0000.png
+- ../../data/font_imgs/test_v1_S128F120_FS64/266/0000.png
+- ../../data/font_imgs/test_v1_S128F120_FS64/267/0000.png
+- ../../data/font_imgs/test_v1_S128F120_FS64/268/0000.png
+- ../../data/font_imgs/test_v1_S128F120_FS64/269/0000.png
+- ../../data/font_imgs/test_v1_S128F120_FS64/270/0000.png
+- ../../data/font_imgs/test_v1_S128F120_FS64/271/0000.png
+- ../../data/font_imgs/test_v1_S128F120_FS64/272/0000.png
+- ../../data/font_imgs/test_v1_S128F120_FS64/273/0000.png
+- ../../data/font_imgs/test_v1_S128F120_FS64/274/0000.png
+- ../../data/font_imgs/test_v1_S128F120_FS64/275/0000.png
+- ../../data/font_imgs/test_v1_S128F120_FS64/276/0000.png
+- ../../data/font_imgs/test_v1_S128F120_FS64/277/0000.png
+- ../../data/font_imgs/test_v1_S128F120_FS64/278/0000.png
+- ../../data/font_imgs/test_v1_S128F120_FS64/279/0000.png
+- ../../data/font_imgs/test_v1_S128F120_FS64/280/0000.png
+- ../../data/font_imgs/test_v1_S128F120_FS64/281/0000.png
+- ../../data/font_imgs/test_v1_S128F120_FS64/282/0000.png
+temperature: 0.07
+train_batch_size: 4
+ttf_path: ttf/KaiXinSongA.ttf
+ttf_root: null
+unet_channels: !!python/tuple
+- 64
+- 128
+- 256
+- 512
+use_component: true
+use_controlnet: false
+use_skeleton: true
+use_svg: false
+use_unet_post_loss: false
+use_unet_post_skeleton_loss: false
+use_unet_pre_loss: true
+use_vae: false
+vqgan_path: ../../0_open_source/IF-Font/vqgan-logs/vqgan_openImages_f8_n256

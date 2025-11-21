@@ -1,0 +1,29 @@
+python my_sample_all.py \
+    --ckpt_dir="/opt/Vivatype-AI/code_backup/v9.1_20251117/outputs_my_train/global_step_160000" \
+    --content_image_root="../../data/font_imgs/test_v1_S128F120_FS64" \
+    --style_image_root="../../data/font_imgs/test_v1_S128F120_FS64" \
+    --svg_root="../../data/my_vecfont_dataset/chn/UFSC64_v1" \
+    --skeleton_root="../../data/my_font_bone/chn/UFSC64_v1" \
+    --skeleton_image_root="../../data/font_imgs/test_v1_skeleton" \
+    --my_feat_root="../../data/my_font_feat/chn/UFSC16" \
+    --use_component \
+    --use_skeleton \
+    --no-use_svg \
+    --no-use_vae \
+    --no-use_controlnet \
+    --style_font=-1 \
+    --style_char 1 2 3 \
+    --content_font=94 \
+    --content_char=0 \
+    --max_skeleton_len=441 \
+    --mixed_precision="no" \
+    --save_image \
+    --save_image_dir="outputs_my_test/" \
+    --device="cuda:0" \
+    --algorithm_type="dpmsolver++" \
+    --guidance_type="classifier-free" \
+    --guidance_scale=7.5 \
+    --num_inference_steps=20 \
+    --method="multistep" \
+    --vqgan_path="../../0_open_source/IF-Font/vqgan-logs/vqgan_openImages_f8_n256" \
+    

@@ -1,0 +1,21 @@
+python my_sample.py \
+    --ckpt_dir="outputs_my_train/global_step_160000/" \
+    --content_image_root="../../data/font_imgs/train_S128F80_TRAIN800" \
+    --style_image_root="../../data/font_imgs/train_S128F80_TRAIN800" \
+    --seq_root="../../data/my_vecfont_dataset/chn/SFSC" \
+    --bone_root="../../data/my_font_bone/chn/SFSC" \
+    --my_feat_root="../../data/my_font_feat/chn/SFSC" \
+    --style_font=159 \
+    --style_char 1 2 3 \
+    --content_font=11 \
+    --content_char=0 \
+    --save_image \
+    --save_image_dir="outputs_my_test/" \
+    --device="cuda:0" \
+    --algorithm_type="dpmsolver++" \
+    --guidance_type="classifier-free" \
+    --guidance_scale=7.5 \
+    --num_inference_steps=20 \
+    --method="multistep" \
+    --vqgan_path="../../0_open_source/IF-Font/vqgan-logs/vqgan_openImages_f8_n256" \
+    

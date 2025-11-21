@@ -1,0 +1,23 @@
+python my_sample_multi_content.py \
+    --ckpt_dir="outputs_my_train/global_step_440000/" \
+    --content_image_root="../../data/font_imgs/test_v1_S128F120_FS64" \
+    --style_image_root="../../data/font_imgs/test_v1_S128F120_FS64" \
+    --seq_root="../../data/my_vecfont_dataset/chn/UFSC" \
+    --bone_root="../../data/my_font_bone/chn/UFSC64_v1" \
+    --skeleton_image_root="../../data/font_imgs/test_v1_skeleton" \
+    --my_feat_root="../../data/my_font_feat/chn/UFSC16" \
+    --style_font 139 \
+    --style_char 0 1 2 3 4 5 6 7 8 9 \
+    --content_font=94 \
+    --content_char 54 55 56 57 58 59 60 61 62 63 \
+    --max_bone_len=441 \
+    --save_image \
+    --save_image_dir="outputs_my_test/" \
+    --device="cuda:0" \
+    --algorithm_type="dpmsolver++" \
+    --guidance_type="classifier-free" \
+    --guidance_scale=7.5 \
+    --num_inference_steps=20 \
+    --method="multistep" \
+    --vqgan_path="../../0_open_source/IF-Font/vqgan-logs/vqgan_openImages_f8_n256" \
+    
